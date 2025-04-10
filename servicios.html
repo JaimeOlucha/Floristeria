@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Floristería Naranjo</title>
+    <meta name="description" content="Descubre nuestros servicios de arreglos florales para eventos, decoración, talleres y entregas a domicilio.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    Floristería Naranjo
+                    <span class="logo-tagline">Un espacio de paz y belleza</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="servicios.html" class="nav-link active">Servicios</a></li>
+                    <li class="nav-item"><a href="galeria.html" class="nav-link">Galería</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/servicios-hero.jpg'); height: 60vh;">
+        <div class="hero-content">
+            <h1 class="hero-title">Nuestros Servicios</h1>
+            <p class="hero-subtitle">Creamos momentos inolvidables</p>
+        </div>
+    </section>
+
+    <!-- Introducción a Servicios -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Servicios que ofrecemos</h2>
+            </div>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg);">
+                En Floristería Naranjo no solo vendemos flores, creamos experiencias. Nuestros servicios están diseñados para acompañarte en cada momento importante de tu vida, desde el nacimiento de un bebé hasta la despedida de un ser querido.
+            </p>
+            <div class="servicios-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+                <a href="#eventos" class="servicio-card" style="text-decoration: none; color: inherit; background-color: var(--blanco); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="servicio-image" style="height: 200px; overflow: hidden;">
+                        <img src="images/servicio-eventos.jpg" alt="Eventos Especiales" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="servicio-content" style="padding: var(--spacing-sm); text-align: center;">
+                        <h3 class="servicio-title" style="font-family: var(--font-subtitles); margin-bottom: var(--spacing-xs);">Eventos Especiales</h3>
+                        <p>Bodas, bautizos, comuniones y celebraciones</p>
+                    </div>
+                </a>
+                <a href="#decoracion" class="servicio-card" style="text-decoration: none; color: inherit; background-color: var(--blanco); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="servicio-image" style="height: 200px; overflow: hidden;">
+                        <img src="images/servicio-decoracion.jpg" alt="Decoración" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="servicio-content" style="padding: var(--spacing-sm); text-align: center;">
+                        <h3 class="servicio-title" style="font-family: var(--font-subtitles); margin-bottom: var(--spacing-xs);">Decoración</h3>
+                        <p>Transformamos espacios con arreglos florales</p>
+                    </div>
+                </a>
+                <a href="#talleres" class="servicio-card" style="text-decoration: none; color: inherit; background-color: var(--blanco); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="servicio-image" style="height: 200px; overflow: hidden;">
+                        <img src="images/servicio-talleres.jpg" alt="Talleres" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="servicio-content" style="padding: var(--spacing-sm); text-align: center;">
+                        <h3 class="servicio-title" style="font-family: var(--font-subtitles); margin-bottom: var(--spacing-xs);">Talleres</h3>
+                        <p>Aprende el arte de los arreglos florales</p>
+                    </div>
+                </a>
+                <a href="#entregas" class="servicio-card" style="text-decoration: none; color: inherit; background-color: var(--blanco); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="servicio-image" style="height: 200px; overflow: hidden;">
+                        <img src="images/servicio-entregas.jpg" alt="Entregas" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                    </div>
+                    <div class="servicio-content" style="padding: var(--spacing-sm); text-align: center;">
+                        <h3 class="servicio-title" style="font-family: var(--font-subtitles); margin-bottom: var(--spacing-xs);">Entregas</h3>
+                        <p>Servicio a domicilio y envíos especiales</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eventos Especiales -->
+    <section id="eventos" class="section" style="background-color: var(--crema);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Eventos Especiales</h2>
+            </div>
+            <div class="servicio-detalle" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div class="servicio-texto" style="flex: 1; min-width: 300px;">
+                    <p class="accent-text">Creamos momentos inolvidables</p>
+                    <p>En Floristería Naranjo entendemos que cada evento es único y especial. Por eso, diseñamos arreglos florales personalizados que capturan la esencia de cada celebración y crean ambientes memorables.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Bodas</h3>
+                    <p>Desde el ramo de novia hasta la decoración del salón, nos encargamos de todos los detalles florales para hacer de tu día más especial un momento mágico.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Bautizos y Comuniones</h3>
+                    <p>Arreglos delicados y elegantes para celebrar estos importantes momentos en la vida de los más pequeños.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Funerales</h3>
+                    <p>Coronas y arreglos florales que expresan respeto y acompañan en los momentos de despedida.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="margin-top: var(--spacing-md);">Solicitar presupuesto</a>
+                </div>
+                <div class="servicio-imagen" style="flex: 1; min-width: 300px; border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <img src="images/eventos-detalle.jpg" alt="Decoración de eventos" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decoración -->
+    <section id="decoracion" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Decoración</h2>
+            </div>
+            <div class="servicio-detalle" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div class="servicio-imagen" style="flex: 1; min-width: 300px; border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <img src="images/decoracion-detalle.jpg" alt="Decoración de espacios" style="width: 100%; height: auto;">
+                </div>
+                <div class="servicio-texto" style="flex: 1; min-width: 300px;">
+                    <p class="accent-text">Transformamos espacios</p>
+                    <p>Nuestro servicio de decoración floral transforma cualquier espacio en un ambiente único y especial. Trabajamos con diferentes estilos y presupuestos para crear la atmósfera perfecta para cada ocasión.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Decoración de Iglesias</h3>
+                    <p>Arreglos florales para el altar, bancos y entrada que crean un ambiente solemne y elegante.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Decoración de Salones</h3>
+                    <p>Centros de mesa, arcos florales y decoración general para eventos en salones y restaurantes.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Eventos Corporativos</h3>
+                    <p>Arreglos florales para oficinas, presentaciones y eventos empresariales.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="margin-top: var(--spacing-md);">Solicitar información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talleres -->
+    <section id="talleres" class="section" style="background-color: var(--crema);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Talleres</h2>
+            </div>
+            <div class="servicio-detalle" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div class="servicio-texto" style="flex: 1; min-width: 300px;">
+                    <p class="accent-text">Aprende con nosotros</p>
+                    <p>Compartimos nuestra pasión por las flores a través de talleres donde podrás aprender técnicas de arreglos florales y decoración. Una experiencia enriquecedora para todas las edades.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Talleres de Arreglos Florales</h3>
+                    <p>Aprende a crear tus propios arreglos con flores frescas, conociendo técnicas profesionales y consejos prácticos.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Talleres para Niños</h3>
+                    <p>Actividades especiales para que los más pequeños se conecten con la naturaleza y desarrollen su creatividad.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Talleres Temáticos</h3>
+                    <p>Cursos especiales para ocasiones como Navidad, San Valentín o primavera.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="margin-top: var(--spacing-md);">Consultar calendario</a>
+                </div>
+                <div class="servicio-imagen" style="flex: 1; min-width: 300px; border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <img src="images/talleres-detalle.jpg" alt="Taller de arreglos florales" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entregas -->
+    <section id="entregas" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entregas</h2>
+            </div>
+            <div class="servicio-detalle" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div class="servicio-imagen" style="flex: 1; min-width: 300px; border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <img src="images/entregas-detalle.jpg" alt="Servicio de entrega" style="width: 100%; height: auto;">
+                </div>
+                <div class="servicio-texto" style="flex: 1; min-width: 300px;">
+                    <p class="accent-text">Llevamos belleza a tu puerta</p>
+                    <p>Nuestro servicio de entrega garantiza que tus flores lleguen frescas y en perfectas condiciones a su destino. Cubrimos toda la ciudad y alrededores.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Entrega a Domicilio</h3>
+                    <p>Servicio rápido y cuidadoso para que tus arreglos florales lleguen perfectos a su destino.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Envíos Especiales</h3>
+                    <p>Para hospitales, funerarias y otros lugares con horarios y requisitos específicos.</p>
+                    <h3 style="margin-top: var(--spacing-md);">Seguimiento de Pedidos</h3>
+                    <p>Te mantenemos informado sobre el estado de tu pedido desde la preparación hasta la entrega.</p>
+                    <a href="contacto.html" class="btn btn-primary" style="margin-top: var(--spacing-md);">Consultar zonas de entrega</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section class="section" style="background-color: var(--crema);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Precios</h2>
+            </div>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg);">
+                Ofrecemos precios competitivos y asequibles para todos los bolsillos. Cada servicio se adapta a tus necesidades y presupuesto.
+            </p>
+            <div class="precios-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+                <div class="precio-card" style="background-color: var(--blanco); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); padding: var(--spacing-md); text-align: center;">
+                    <h3>Eventos Básico</h3>
+                    <p class="precio" style="font-size: 2rem; color: var(--naranja); margin: var(--spacing-sm) 0;">Desde 150€</p>
+                    <ul style="list-style: none; margin-bottom: var(--spacing-md); text-align: left;">
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Ramo principal</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> 2 centros de mesa</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Decoración básica</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Asesoramiento</li>
+                    </u
+(Content truncated due to size limit. Use line ranges to read in chunks) l>
+                    <a href="contacto.html" class="btn btn-primary">Solicitar presupuesto</a>
+                </div>
+                <div class="precio-card" style="background-color: var(--blanco); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); padding: var(--spacing-md); text-align: center;">
+                    <h3>Eventos Premium</h3>
+                    <p class="precio" style="font-size: 2rem; color: var(--naranja); margin: var(--spacing-sm) 0;">Desde 300€</p>
+                    <ul style="list-style: none; margin-bottom: var(--spacing-md); text-align: left;">
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Ramo principal</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Centros de mesa personalizados</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Decoración completa</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><i class="fas fa-check" style="color: var(--verde-oliva); margin-right: 8px;"></i> Asesoramiento y seguimiento</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-primary">Solicitar presupuesto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>Floristería Naranjo</h3>
+                <p>Un espacio de paz y belleza inspirado en nuestras raíces.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="index.html">Inicio</a></li>
+                    <li class="footer-link"><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li class="footer-link"><a href="productos.html">Productos</a></li>
+                    <li class="footer-link"><a href="servicios.html">Servicios</a></li>
+                    <li class="footer-link"><a href="galeria.html">Galería</a></li>
+                    <li class="footer-link"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Betxi</p>
+                <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@floristerianarajo.com</p>
+                <p><i class="fas fa-clock"></i> Lun-Sáb: 9:00 - 20:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Floristería Naranjo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Floristería Naranjo</title>
+    <meta name="description" content="Explora nuestra galería de arreglos florales, decoraciones para eventos y el espacio de nuestra floristería inspirada en los naranjos y la cerámica.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .galeria-item {
+            height: 300px;
+            overflow: hidden;
+            border-radius: var(--border-radius-md);
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .galeria-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .galeria-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .galeria-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .galeria-item:hover .galeria-caption {
+            opacity: 1;
+        }
+        
+        .galeria-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            background: var(--blanco);
+            border: 2px solid var(--verde-oliva);
+            color: var(--verde-oliva);
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--verde-oliva);
+            color: var(--blanco);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    Floristería Naranjo
+                    <span class="logo-tagline">Un espacio de paz y belleza</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="servicios.html" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="galeria.html" class="nav-link active">Galería</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/galeria-hero.jpg'); height: 60vh;">
+        <div class="hero-content">
+            <h1 class="hero-title">Nuestra Galería</h1>
+            <p class="hero-subtitle">Belleza que inspira</p>
+        </div>
+    </section>
+
+    <!-- Galería Principal -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explora Nuestros Trabajos</h2>
+            </div>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg);">
+                Te invitamos a explorar nuestra galería de arreglos florales, decoraciones para eventos y el espacio de nuestra floristería. Cada imagen cuenta una historia y refleja nuestra pasión por las flores y la belleza.
+            </p>
+            
+            <div class="galeria-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="arreglos">Arreglos</button>
+                <button class="filter-btn" data-filter="eventos">Eventos</button>
+                <button class="filter-btn" data-filter="tienda">Nuestra Tienda</button>
+                <button class="filter-btn" data-filter="talleres">Talleres</button>
+            </div>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item" data-category="arreglos">
+                    <img src="images/galeria-arreglo-1.jpg" alt="Arreglo floral primaveral">
+                    <div class="galeria-caption">
+                        <h3>Ramo Primaveral</h3>
+                        <p>Arreglo con flores de temporada</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="arreglos">
+                    <img src="images/galeria-arreglo-2.jpg" alt="Centro de mesa elegante">
+                    <div class="galeria-caption">
+                        <h3>Centro Elegancia</h3>
+                        <p>Centro de mesa para eventos formales</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="eventos">
+                    <img src="images/galeria-evento-1.jpg" alt="Decoración de boda">
+                    <div class="galeria-caption">
+                        <h3>Boda Romántica</h3>
+                        <p>Decoración floral para ceremonia</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="eventos">
+                    <img src="images/galeria-evento-2.jpg" alt="Decoración de salón">
+                    <div class="galeria-caption">
+                        <h3>Celebración Especial</h3>
+                        <p>Arreglos para salón de eventos</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="tienda">
+                    <img src="images/galeria-tienda-1.jpg" alt="Interior de la floristería">
+                    <div class="galeria-caption">
+                        <h3>Nuestro Espacio</h3>
+                        <p>Un lugar para hacer STOP</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="tienda">
+                    <img src="images/galeria-tienda-2.jpg" alt="Exhibición de flores">
+                    <div class="galeria-caption">
+                        <h3>Exhibición Floral</h3>
+                        <p>Variedad de flores frescas</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="talleres">
+                    <img src="images/galeria-taller-1.jpg" alt="Taller de arreglos florales">
+                    <div class="galeria-caption">
+                        <h3>Taller Creativo</h3>
+                        <p>Aprendiendo el arte floral</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="talleres">
+                    <img src="images/galeria-taller-2.jpg" alt="Taller para niños">
+                    <div class="galeria-caption">
+                        <h3>Taller Infantil</h3>
+                        <p>Los pequeños conectan con la naturaleza</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="arreglos">
+                    <img src="images/galeria-arreglo-3.jpg" alt="Ramo de novia">
+                    <div class="galeria-caption">
+                        <h3>Ramo Nupcial</h3>
+                        <p>Delicado ramo para novias</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="eventos">
+                    <img src="images/galeria-evento-3.jpg" alt="Decoración de iglesia">
+                    <div class="galeria-caption">
+                        <h3>Ceremonia Religiosa</h3>
+                        <p>Decoración para iglesia</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="tienda">
+                    <img src="images/galeria-tienda-3.jpg" alt="Detalles de la tienda">
+                    <div class="galeria-caption">
+                        <h3>Detalles Cerámicos</h3>
+                        <p>Homenaje a nuestras raíces</p>
+                    </div>
+                </div>
+                <div class="galeria-item" data-category="talleres">
+                    <img src="images/galeria-taller-3.jpg" alt="Resultados de taller">
+                    <div class="galeria-caption">
+                        <h3>Creaciones del Taller</h3>
+                        <p>Arreglos hechos por participantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios Visuales -->
+    <section class="section" style="background-color: var(--crema);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios Visuales</h2>
+            </div>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg);">
+                Nuestros clientes comparten sus momentos especiales con nuestras flores. Cada imagen cuenta una historia de celebración, amor y belleza.
+            </p>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="images/testimonio-1.jpg" alt="Boda con nuestras flores">
+                    <div class="galeria-caption">
+                        <h3>Boda de María y Juan</h3>
+                        <p>"Hicieron de nuestro día algo mágico"</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/testimonio-2.jpg" alt="Celebración de cumpleaños">
+                    <div class="galeria-caption">
+                        <h3>Cumpleaños de Ana</h3>
+                        <p>"El centro de mesa fue espectacular"</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/testimonio-3.jpg" alt="Evento corporativo">
+                    <div class="galeria-caption">
+                        <h3>Inauguración Empresa XYZ</h3>
+                        <p>"Profesionalidad y elegancia"</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/testimonio-4.jpg" alt="Bautizo">
+                    <div class="galeria-caption">
+                        <h3>Bautizo de Lucía</h3>
+                        <p>"Delicado y perfecto para la ocasión"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Instagram -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Síguenos en Instagram</h2>
+            </div>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-lg);">
+                Comparte tus momentos con nuestras flores usando el hashtag #FloristeríaNaranjo
+            </p>
+            
+            <div class="instagram-feed" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+                <div style="height: 200px; overflow: hidden;">
+                    <img src="images/instagram-1.jpg" alt="Post de Instagram" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 200px; overflow: hidden;">
+                    <img src="images/instagram-2.jpg" alt="Post de Instagram" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 200px; overflow: hidden;">
+                    <img src="images/instagram-3.jpg" alt="Post de Instagram" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 200px; overflow: hidden;">
+                    <img src="images/instagram-4.jpg" alt="Post de Instagram" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 200px; overflow: hidden;">
+                    <img src="images/instagram-5.jpg" alt="Post de Instagram" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="height: 200px; overflow: hidden;">
+                    <img src="images/instagram-6.jpg" alt="Post de Instagram" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: var(--spacing-md);">
+                <a href="https://www.instagram.com/" target="_blank" class="btn btn-primary">Seguir en Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">¿Te gustaría ver más?</h2>
+            <p class="cta-text">Visita nuestra tienda o contáctanos para conocer más sobre nuestros productos y servicios.</p>
+            <a href="contacto.html" class="btn btn-primary">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>Floristería Naranjo</h3>
+                <p>Un espacio de paz y belleza inspirado en nuestras raíces.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="index.html">Inicio</a></li>
+                    <li class="footer-link"><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li class="footer-link"><a href="productos.html">Productos</a></li>
+                    <li class="footer-link"><a href="servicios.html">Servicios</a></li>
+                    <li class="footer-link"><a href="galeria.html">Galería</a></li>
+                    <li class="footer-link"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Betxi</p>
+                <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@floristerianarajo.com</p>
+                <p><i class="fas fa-clock"></i> Lun-Sáb: 9:00 - 20:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Floristería Naranjo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Filtrado de galería
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.galeria-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Cambiar clase activa
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filtrar elementos
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- Fin del documento HTML -->
